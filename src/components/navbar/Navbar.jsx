@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 function Navbar() {
   const location = useLocation();
-  const [activeItem, setActiveItem] = useState('Home');
+  const [setActiveItem] = useState('Home');
   const [menuOpen, setMenuOpen] = useState(false); // Track the menu state
 
   const handleItemClick = (item) => {
@@ -22,8 +22,8 @@ function Navbar() {
         <div className='logoContainer'><img src='/logo-nav.png' alt='logo' /></div>
         <div className='companyName'>STORECODE</div>
         <div className='mobileIconHolder' onClick={toggleMenu}>
-          <img src='/burger.png' className={menuOpen ? 'hidden' : ''} />
-          <img src='/close.png' className={!menuOpen ? 'hidden' : ''} />
+          <img src='/burger.png' alt='burger' className={menuOpen ? 'hidden' : ''} />
+          <img src='/close.png' alt='close' className={!menuOpen ? 'hidden' : ''} />
         </div>
       </div>
       <div className={`navRight ${menuOpen ? 'show-menu' : ''}`}>
